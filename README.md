@@ -30,7 +30,7 @@ Through this project, I aim to:
 | **Version Control** | Git & GitHub |
 | **UI Design Reference** | Figma |
 
-## 🧰 "Tech Stack"
+## 🧰 "Project Roles and Responsibilities"
 
 Frontend: HTML, CSS, JavaScript (React or similar framework)
 Version Control: Git & GitHub

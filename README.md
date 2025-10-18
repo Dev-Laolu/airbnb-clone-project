@@ -61,7 +61,7 @@ Through this project, I aim to:
 
 ---
 
-## 🎨 Design System  
+## 🎨"UI/UX Design Planning"
 
 ### **Color Palette**
 | Role | Hex Code |

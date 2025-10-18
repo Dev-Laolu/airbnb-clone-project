@@ -88,6 +88,8 @@ Database: MongoDB or PostgreSQL (optional)
 
 ---
 
+
+# "UI Component Patterns"
 ## 💻 Pages Overview  
 
 | Page | Description |

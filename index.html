@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaijaBnb</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="font/CircularStd-Medium.otf" as="font" type="font/otf" crossorigin="anonymous">
+    <link rel="preload" href="font/CircularStd-Bold.otf" as="font" type="font/otf" crossorigin="anonymous">
+    <link rel="preload" href="font/CircularStd-Book.otf" as="font" type="font/otf" crossorigin="anonymous">
+
+</head>
+<body>
+    <script src="script.js">
+    </script>
+
+    <!-- Header Section -->
+    <header class="header-section">
+        <div class="header-wrap">
+            <a href="./index.html" class="logo-tag"><h1>NaijaBnb</h1></a>
+        </div>
+
+        <!-- nav toggle (visible on small screens) -->
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="right-side" aria-label="Toggle navigation">
+            <span class="nav-icon">☰</span>
+        </button>
+
+        <div class="right-side" id="right-side">
+            <ul>
+                <li><a href="#">Find Stays</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+            <form action="">
+                <input type="text"  class="search" name="" id="search" placeholder="Search">
+                <input type="button" value="Search" id="search-btn">
+            </form>
+
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="filter-section-1">
+            <h1>Find your Quick Stay in Nigeria</h1>
+        <h2>Discover unique homes and experiences around the world.</h2>
+        </div>
+
+        <div class="search-container">
+            <form class="search-bar" action="#" method="get">
+                <!-- Destination Input -->
+                <div class="search-item">
+                <span class="icon">📍</span>
+                <input type="text" list="destinations" placeholder="Search destinations" name="destination">
+                <datalist id="destinations">
+                    <option value="Lagos"></option>
+                    <option value="Abeokuta"></option>
+                    <option value="Abuja"></option>
+                    <option value="Port Harcourt"></option>
+                    <option value="Ibadan"></option>
+                </datalist>
+                </div>
+
+                <!-- Date Picker -->
+                <div class="search-item">
+                <span class="icon">📅</span>
+                <input type="date" name="date">
+                </div>
+
+                <!-- Guest Dropdown -->
+                <div class="search-item">
+                <span class="icon">👥</span>
+                <select name="guests">
+                    <option value="1">1 guest</option>
+                    <option value="2">2 guests</option>
+                    <option value="3">3 guests</option>
+                    <option value="4">4 guests</option>
+                </select>
+                </div>
+
+                <!-- Search Button -->
+                <button type="submit" class="search-btn">Search</button>
+            </form>
+        </div>
+
+        <!-- Apartment Listings -->
+    </section>
+
+    <section class="apartment-container">
+        <div class="apartment">
+
+            <!-- Port Harcourt -->
+                    <div class="house-card">
+                        <div class="slider">
+                            <!-- Hidden anchors for navigation (unique per slider) -->
+                            <div id="ph-slide1"></div>
+                            <div id="ph-slide2"></div>
+                            <div id="ph-slide3"></div>
+
+                            <!-- Slide images -->
+                            <div class="slides">
+                                <img src="./img/7.jpg" alt="Image 1">
+                                <img src="./img/5.jpg" alt="Image 2">
+                                <img src="./img/6.jpg" alt="Image 3">
+                            </div>
+
+                            <!-- Navigation dots -->
+                            <div class="navigation">
+                                <a href="#ph-slide1" aria-label="Port Harcourt slide 1"></a>
+                                <a href="#ph-slide2" aria-label="Port Harcourt slide 2"></a>
+                                <a href="#ph-slide3" aria-label="Port Harcourt slide 3"></a>
+                            </div>
+                        </div>
+                        <div class="house-info">
+                            <h1>Cozy Cottage</h1>
+                            <h2>New Gra, Port Harcourt</h2>
+                            
+                            <div class="rating">
+                                <h2>#1,000,000/Night</h2>
+                                <div class="stars">★★★★★</div>
+                                <h3>Rating: 5.0/5</h3>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
+            <!-- Abuja -->
+                    <div class="house-card">
+                        <div class="slider">
+                            <!-- Hidden anchors for navigation (unique per slider) -->
+                            <div id="abj-slide1"></div>
+                            <div id="abj-slide2"></div>
+                            <div id="abj-slide3"></div>
+
+                            <!-- Slide images -->
+                            <div class="slides">
+                                <img src="./img/8.jpg" alt="Image 1">
+                                <img src="./img/7.jpg" alt="Image 2">
+                                <img src="./img/5.jpg" alt="Image 3">
+                            </div>
+
+                            <!-- Navigation dots -->
+                            <div class="navigation">
+                                <a href="#abj-slide1" aria-label="Abuja slide 1"></a>
+                                <a href="#abj-slide2" aria-label="Abuja slide 2"></a>
+                                <a href="#abj-slide3" aria-label="Abuja slide 3"></a>
+                            </div>
+                        </div>
+                        <div class="house-info">
+                            <h1>Modern Apartment</h1>
+                            <h2>FCT, Abuja</h2>
+                            
+                            <div class="rating">
+                                <h2>#1,000,000/Night</h2>
+                                <div class="stars">★★★★★</div>
+                                <h3>Rating: 5.0/5</h3>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+            <!-- Ibadan -->
+                    <div class="house-card">
+                        <div class="slider">
+                            <!-- Hidden anchors for navigation (unique per slider) -->
+                            <div id="ibd-slide1"></div>
+                            <div id="ibd-slide2"></div>
+                            <div id="ibd-slide3"></div>
+
+                            <!-- Slide images -->
+                            <div class="slides">
+                                <img src="./img/6.jpg" alt="Image 1">
+                                <img src="./img/5.jpg" alt="Image 2">
+                                <img src="./img/6.jpg" alt="Image 3">
+                            </div>
+
+                            <!-- Navigation dots -->
+                            <div class="navigation">
+                                <a href="#ibd-slide1" aria-label="Ibadan slide 1"></a>
+                                <a href="#ibd-slide2" aria-label="Ibadan slide 2"></a>
+                                <a href="#ibd-slide3" aria-label="Ibadan slide 3"></a>
+                            </div>
+                        </div>
+                        <div class="house-info">
+                            <h1>Luxury Apartment</h1>
+                            <h2>Bodija, Ibadan</h2>
+                            
+                            <div class="rating">
+                                <h2>#1,000,000/Night</h2>
+                                <div class="stars">★★★★★</div>
+                                <h3>Rating: 5.0/5</h3>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
+                    <!-- Abeokuta -->
+                    <div class="house-card">
+                        <div class="slider">
+                            <!-- Hidden anchors for navigation (unique per slider) -->
+                            <div id="abe-slide1"></div>
+                            <div id="abe-slide2"></div>
+                            <div id="abe-slide3"></div>
+
+                            <!-- Slide images -->
+                            <div class="slides">
+                                <img src="./img/7.jpg" alt="Image 1">
+                                <img src="./img/5.jpg" alt="Image 2">
+                                <img src="./img/6.jpg" alt="Image 3">
+                            </div>
+
+                            <!-- Navigation dots -->
+                            <div class="navigation">
+                                <a href="#abe-slide1" aria-label="Abeokuta slide 1"></a>
+                                <a href="#abe-slide2" aria-label="Abeokuta slide 2"></a>
+                                <a href="#abe-slide3" aria-label="Abeokuta slide 3"></a>
+                            </div>
+                        </div>
+                        <div class="house-info">
+                            <h1>Cozy Cottage</h1>
+                            <h2>Papalanto, Abeokuta</h2>
+                            
+                            <div class="rating">
+                                <h2>#1,000,000/Night</h2>
+                                <div class="stars">★★★★★</div>
+                                <h3>Rating: 5.0/5</h3>
+                            </div>
+                        </div>
+                        
+                    </div>
+            <!-- lagos -->
+                    <div class="house-card">
+                        <div class="slider">
+                            <!-- Hidden anchors for navigation (unique per slider) -->
+                            <div id="lag-slide1"></div>
+                            <div id="lag-slide2"></div>
+                            <div id="lag-slide3"></div>
+
+                            <!-- Slide images -->
+                            <div class="slides">
+                                <img src="./img/4.jpg" alt="Image 1">
+                                <img src="./img/5.jpg" alt="Image 2">
+                                <img src="./img/6.jpg" alt="Image 3">
+                            </div>
+
+                            <!-- Navigation dots -->
+                            <div class="navigation">
+                                <a href="#lag-slide1" aria-label="Lagos slide 1"></a>
+                                <a href="#lag-slide2" aria-label="Lagos slide 2"></a>
+                                <a href="#lag-slide3" aria-label="Lagos slide 3"></a>
+                            </div>
+                        </div>
+                        <div class="house-info">
+                            <h1>Beach House</h1>
+                            <h2>Lekki, Lagos</h2>
+                            
+                            <div class="rating">
+                                <h2>#1,000,000/Night</h2>
+                                <div class="stars">★★★★★</div>
+                                <h3>Rating: 5.0/5</h3>
+                            </div>
+                        </div>
+                        
+                    </div>
+    </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer class="footer-section">
+        <div class="footer-wrap">
+            <div class="footer-links">
+                <a href="./index.html">NaijaBnb.</a>
+                <a href="#">Find Stay</a>
+                <a href="./login.html">Login</a>
+
+            </div>
+            <div class="footer-socials">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+
+            </div>
+            <div class="footer-content">
+                <p>&copy; 2024 NaijaBnb. All rights reserved.</p>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>

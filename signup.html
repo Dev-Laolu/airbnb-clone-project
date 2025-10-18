@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="font/CircularStd-Medium.otf" as="font" type="font/otf" crossorigin="anonymous">
+    <link rel="preload" href="font/CircularStd-Bold.otf" as="font" type="font/otf" crossorigin="anonymous">
+    <link rel="preload" href="font/CircularStd-Book.otf" as="font" type="font/otf" crossorigin="anonymous">
+    <title>NaijaBnb|Sign Up</title>
+</head>
+<body>
+    <script src="login.js"></script>
+    <script src="script.js"></script>
+    <header class="header-section">
+        <div class="header-wrap">
+            <a href="./index.html" class="logo-tag"><h1>NaijaBnb</h1></a>
+        </div>
+
+        <!-- nav toggle (visible on small screens) -->
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="right-side" aria-label="Toggle navigation">
+            <span class="nav-icon">☰</span>
+        </button>
+
+        <div class="right-side" id="right-side">
+            <ul>
+                <li><a href="#">Find Stays</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+            <form action="">
+                <input type="text"  class="search" name="" id="search" placeholder="Search">
+                <input type="button" value="Search" id="search-btn">
+            </form>
+
+        </div>
+    </header>
+
+    <!-- Sign Up Section -->
+    <section class="sign-up">
+        <div class="sign-up-wrap">
+            <h1>Create an Account</h1>
+            <h2>Join us for the best travel experiences.</h2>
+            <form action="" class="sign-up-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button class="sign-up-btn" type="submit">Sign Up</button>
+                <p class="login-link">Already have an account? <a href="./login.html">Log in here</a></p>
+            </form>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-wrap">
+            <div class="footer-links">
+                <a href="./index.html">NaijaBnb.</a>
+                <a href="#">Find Stay</a>
+                <a href="./login.html">Login</a>
+
+            </div>
+            <div class="footer-socials">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+
+            </div>
+            <div class="footer-content">
+                <p>&copy; 2024 NaijaBnb. All rights reserved.</p>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>

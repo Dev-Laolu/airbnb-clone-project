@@ -29,3 +29,49 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// modal-section
+function modalsection(){
+      const openLinks = [
+          document.getElementById('login-link'),
+          document.getElementById('login-link-footer')
+      ].filter(Boolean);
+
+      const modal = document.getElementById('login-modal');
+      const overlay = document.getElementById('modal-overlay');
+      const closeBtn = document.getElementById('modal-close');
+      const firstInput = document.getElementById('email');
+
+      // If there's no modal on the page, don't attach modal behavior.
+      if (!modal) return;
+
+      function openModal(e){
+          if(e) e.preventDefault();
+          modal.classList.add('open');
+          modal.setAttribute('aria-hidden', 'false');
+          // small timeout to ensure focusable
+          setTimeout(()=> firstInput && firstInput.focus(), 120);
+          document.addEventListener('keydown', onKeyDown);
+      }
+
+      function closeModal(){
+          modal.classList.remove('open');
+          modal.setAttribute('aria-hidden', 'true');
+          document.removeEventListener('keydown', onKeyDown);
+      }
+
+      function onKeyDown(e){
+          if(e.key === 'Escape') closeModal();
+      }
+
+      openLinks.forEach(link => {
+          link.addEventListener('click', openModal);
+      });
+
+      closeBtn && closeBtn.addEventListener('click', closeModal);
+      overlay && overlay.addEventListener('click', closeModal);
+
+    
+}
+// Initialize modal behavior after the DOM is ready so elements exist
+document.addEventListener('DOMContentLoaded', modalsection);

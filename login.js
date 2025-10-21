@@ -1,45 +1,50 @@
 // Login form handler (static credentials)
 
-document.addEventListener('DOMContentLoaded', function () {
-  const loginForm = document.getElementById('login-form');
-  const loginBtn = document.querySelector('.login-btn');
+document.addEventListener("DOMContentLoaded", () => {
+  // index.html uses id="login-form"
+  const form = document.getElementById("login-form");
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
 
-  if (!loginForm) {
-    console.debug('login.js: no #login-form found');
-    return;
-  }
+  // guard: if form is not present, don't attach handlers
+  if (!form) return;
 
-  function validateAndRedirect(event) {
-    if (event) event.preventDefault();
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevent form from reloading the page
 
-    const emailEl = document.getElementById('email');
-    const passwordEl = document.getElementById('password');
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
 
-    const email = (emailEl && emailEl.value) ? emailEl.value.trim() : '';
-    const password = (passwordEl && passwordEl.value) ? passwordEl.value : '';
+    // Admin credentials
+    const adminEmail = ["olayinkahopewell@gmail.com", "admin@admin.com"];
+    const adminPassword = "admin1234";
+    const userPassword = "user1234";
 
-    const validEmail = 'admin@admin.com';
-    const validPassword = 'admin';
+    // Check credentials
 
-    console.debug('login.js: attempt', { email });
-
-    if (email === validEmail && password === validPassword) {
-      // Use replace to prevent back navigation to the login page
-      window.location.replace('./index.html');
-      return true;
+    // check admin
+    if (adminEmail.includes(email) && password === adminPassword) {
+      alert("Login successful! Redirecting to home page...");
+      window.location.href = "index.html";
+      return;
     }
 
-    alert('Invalid email or password.');
-    return false;
-  }
+    // special case for the first admin email with user password
+    if (email === adminEmail[0] && password === userPassword) {
+      alert("Welcome back Mr Hopewell");
+      window.location.href = "index.html";
+      return;
+    }
 
-  // Attach to form submit
-  loginForm.addEventListener('submit', validateAndRedirect);
+    alert("Invalid email or password. Please try again.");
+  });
 
-  // Also attach to button click in case submit isn't triggered by form
-  if (loginBtn) {
-    loginBtn.addEventListener('click', validateAndRedirect);
-  } else {
-    console.debug('login.js: no .login-btn found');
-  }
+    // Allow pressing Enter key to submit form (if inputs exist)
+  [emailInput, passwordInput].filter(Boolean).forEach((input) => {
+    input.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        form.requestSubmit ? form.requestSubmit() : form.dispatchEvent(new Event("submit", { cancelable: true }));
+      }
+    });
+  });
 });

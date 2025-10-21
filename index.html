@@ -11,9 +11,8 @@
 
 </head>
 <body>
-    <script src="script.js">
-    </script>
-
+    <script src="script.js"> </script>
+    <script src="login.js"></script>
     <!-- Header Section -->
     <header class="header-section">
         <div class="header-wrap">
@@ -24,11 +23,30 @@
         <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="right-side" aria-label="Toggle navigation">
             <span class="nav-icon">☰</span>
         </button>
+            <!-- Hidden Login Modal -->
+        <div class="modal" id="login-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="login-title">
+            <div class="modal-overlay" id="modal-overlay"></div>
+            <div class="modal-content" role="document">
+                <button class="modal-close" id="modal-close" aria-label="Close login">&times;</button>
+                <h1 class="logo-tag">NaijaBnb</h1>
+                <h2 id="login-title">Sign in to NaijaBnb</h2>
+                <form id="login-form" action="#" method="post" novalidate>
+                    <label for="email">Email
+                        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+                    </label>
+                    <label for="password">Password
+                        <input id="password" name="password" type="password" required autocomplete="current-password" placeholder="••••••••">
+                    </label>
+                    <button type="submit" class="btn-primary">Sign in</button>
+                    <div class="modal-footer ">Don't have an account? <a href="./signup.html">Sign up</a></div>
+                </form>
+            </div>
+        </div>
 
         <div class="right-side" id="right-side">
             <ul>
                 <li><a href="#">Find Stays</a></li>
-                <li><a href="./login.html">Login</a></li>
+                <li><a href="#" id="login-link">Login</a></li>
             </ul>
             <form action="">
                 <input type="text"  class="search" name="" id="search" placeholder="Search">

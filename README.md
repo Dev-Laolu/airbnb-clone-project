@@ -22,13 +22,21 @@ Through this project, I aim to:
 
 ---
 
-## 🧩 Tech Stack  
+## 🧩 "Tech Stack"  
 | Category | Tools & Technologies |
 |-----------|----------------------|
 | **Markup & Styling** | HTML5, CSS3 (Flex, Grid, Animations) |
 | **Logic & Interactivity** | JavaScript |
 | **Version Control** | Git & GitHub |
 | **UI Design Reference** | Figma |
+
+## 🧰 "Project Roles and Responsibilities"
+
+Frontend: HTML, CSS, JavaScript (React or similar framework)
+Version Control: Git & GitHub
+Design Tools: Figma (for UI/UX Design)
+Backend: Node.js / Express (optional)
+Database: MongoDB or PostgreSQL (optional)
 
 ---
 
@@ -61,7 +69,7 @@ Through this project, I aim to:
 
 ---
 
-## 🎨 Design System  
+## 🎨"UI/UX Design Planning"
 
 ### **Color Palette**
 | Role | Hex Code |
@@ -80,6 +88,8 @@ Through this project, I aim to:
 
 ---
 
+
+# "UI Component Patterns"
 ## 💻 Pages Overview  
 
 | Page | Description |
